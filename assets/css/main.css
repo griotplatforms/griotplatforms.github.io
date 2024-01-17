@@ -4006,12 +4006,9 @@ input, select, textarea {
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: transparent;
 	}
 
-	body.is-mobile.landing #page-wrapper {
-		background: none;
-	}
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
@@ -4025,5 +4022,5 @@ input, select, textarea {
 	}
 
 	body.is-mobile.landing #footer {
-		background-color: #1d242a;
+		background-color: transparent;
 	}
