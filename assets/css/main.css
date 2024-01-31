@@ -3911,6 +3911,35 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
+	.people {
+		padding: 1rem 0;
+		align-content: center;
+		background-color: #434343;
+		color: #a2c4c9;
+		font-family: "Cantarell";
+		text-transform: none;
+	  }
+	  
+	.stakeholders {
+		margin: 2rem auto;
+		max-width: 1100px;
+	}
+	
+	.stakeholders img {	
+		width: 250px;
+  		height: 250px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 80%;
+	}
+
+	.persons {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		place-items: center;
+		gap: 1rem;
+	}
+
 /* Footer */
 
 	#footer {
