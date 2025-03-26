@@ -5,6 +5,8 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWRXSNYXEN"></script>
   <script src="js/analytics.js"></script>
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeR-QArAAAAAHkQVWEkZ6Lu5rWinR9Uni96uUps"></script>
   <title>waitlist</title>
   <meta content="waitlist" property="og:title">
   <meta content="waitlist" property="twitter:title">
@@ -63,9 +65,7 @@
       errorMessage.style.display = type === 'error' ? 'block' : 'none';
     };
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      
+    async function handleFormSubmit(token) {
       // Hide any existing messages and show loading state
       showMessage('none');
       const originalButtonText = submitButton.value;
@@ -108,6 +108,17 @@
         submitButton.value = originalButtonText;
         submitButton.disabled = false;
       }
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LeR-QArAAAAAHkQVWEkZ6Lu5rWinR9Uni96uUps', {action: 'submit'})
+          .then(function(token) {
+            handleFormSubmit(token);
+          });
+      });
     });
   </script>
 </body>
