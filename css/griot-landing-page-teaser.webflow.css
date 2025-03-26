@@ -133,7 +133,6 @@ label {
   padding-top: 0;
   padding-left: 36px;
   position: relative;
-  overflow: scroll;
 }
 
 .quote-white {
@@ -150,6 +149,10 @@ label {
   margin-top: 125px;
   display: flex;
   position: static;
+  overflow: visible;
+  white-space: normal;
+  outline: none;
+  border: none;
 }
 
 .john-dewey-american-philosopher {
@@ -1097,11 +1100,8 @@ label {
     margin-top: 156px;
     margin-right: 40px;
     padding-right: 0;
-    line-height: 620px;
+    line-height: normal;
     position: static;
-    top: -64px;
-    left: auto;
-    right: auto;
   }
 
   .john-dewey-american-philosopher {
